@@ -1,0 +1,66 @@
+#!/bin/bash
+
+
+source ~/catkin_ws/devel/setup.bash
+source ~/cartographer_ws/devel_isolated/setup.bash
+
+echo "Launching DNV FF car in Gazebo..."
+roslaunch audibot_gazebo autonomousAudi.launch
+echo "Launching Google Cartographer to perform SLAM..."
+roslaunch cartographer_ros FF_cartographer.launch with_odom:=true simulator:=true
+
+sleep 10
+
+for ((i = 0 ; i < 3 ; i++))
+do
+  echo "Saving the ${i}. map using map_server..."  # IN THE END, WE ONLY WANT ONE SPECIFIC MAP IN THE FOLDER. NEW MAPS "OVERWRITE" THE OLD ONES BECAUSE WE WON'T NEED THE OLD ONES ANYMORE.
+  rosrun map_server map_saver -f ~/catkin_ws/src/gpp/maps/map${i} map:=/lidar_map # NOT SURE IF THE ${i} WORK...
+  mv ~/catkin_ws/src/gpp/maps/map${1}.png ~/catkin_ws/src/gpp/maps/map${1}.jpg
+  echo "Finished saving the ${i}.map\n A new map will be saved in 20 seconds"
+
+  for (( t=20; t>0; t-= 5))
+  do
+    echo "${t} seconds left..."
+    sleep 5 
+  done
+  
+    
+done
+
+######
+
+
+#!/bin/bash
+
+source ~/catkin_ws/devel/setup.bash
+echo "Launching DNV FF car in Gazebo..."
+roslaunch audibot_gazebo autonomousAudi.launch ; gnome-terminal --tab # THIS DOESN'T WORK...    xdotool key Control+Page_Up
+
+
+
+source ~/cartographer_ws/devel_isolated/setup.bash
+echo "Launching Google Cartographer to perform SLAM..."
+roslaunch cartographer_ros FF_cartographer.launch with_odom:=true simulator:=true ; gnome-terminal --tab
+
+
+for ((i = 0 ; i < 3 ; i++))
+do
+  echo "Saving the ${i}. map using map_server..."  # IN THE END, WE ONLY WANT ONE SPECIFIC MAP IN THE FOLDER. NEW MAPS "OVERWRITE" THE OLD ONES BECAUSE WE WON'T NEED THE OLD ONES ANYMORE.
+  rosrun map_server map_saver -f ~/catkin_ws/src/gpp/maps/map${i} map:=/lidar_map # NOT SURE IF THE ${i} WORK...
+  cp ~/catkin_ws/src/gpp/maps/map${i}.pgm ~/catkin_ws/src/gpp/maps/map${i}.jpg
+  echo -e "Finished saving the ${i}.map\nA new map will be saved in 20 seconds"
+
+  for (( t=20; t>0; t-= 5))
+  do
+    echo "${t} seconds left..."
+    sleep 5 
+  done
+  
+    
+done
+
+
+
+
+
+
