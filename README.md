@@ -5,7 +5,7 @@ Førsteåret mitt på NTNU hadde jeg verv i Autonomous-gruppa til Fuel Fighter. 
 ## Linux, Git, ROS🚀
 Første steg på veien var å bli kjent med Linux, Git og ROS. Jeg hadde hatt litt Python🐍 og HTML på videregående, og en for-løkke var det mest avanserte progge-konseptet som jeg kjente til. Litt ls- og cd-kommandoer av de andre på gruppa mi var nok til at jeg fikk stjerner i øynene. Jeg kastet meg inn i Linux og Git-verdenen de første ukene som NTNU-student før den kronglete ROS-reisen min sto for tur. ROS står for Robot Operating System, og er et rammeverket som kjører oppå Linux Ubuntu, og brukes av de fleste tekniske organisasjoner som jobber med robotikk. Det ble masse Youtube, tutorials og eksperimentering med ROS, men det var ikke før på vår-semesteret at jeg skjønte mer av ROS. ROSs ass...
 
-![Ross](Ross_Geller.png)
+<img src="README_images/Ross_Geller.png" width="100" title="ROSs">
 
 Sjekk ut [ROS_playground](ROS_playground) for å få et lite innblikk i ROS, og [Terminal_playground/README.md](Terminal_playground/README.md) for å ta en titt på et av bash-scriptene som jeg skrev for å automatisere en del kommandolinjer.
 
