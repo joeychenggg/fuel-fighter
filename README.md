@@ -13,13 +13,3 @@ Sjekk ut [ROS_playground](ROS_playground) for å få et lite innblikk i ROS, og 
 Hovedansvaret mitt i Autonomous-gruppen var å forbedre Autonomous Simulatoren sammen med en annen i gruppa. Gazebo er en 3D-simulator, og simulatoren ble brukt av de andre på gruppa for å teste ut implementasjonene deres. Det er tross alt tryggere å teste ut kode i en simulator enn på Fuel Fighter-bilen😯 Hopp inn i backbonen for å kikke litt på noen av bildene av simulatoren vår! Backbonen oppsummerer også mye av det jeg holdt på med i Fuel Fighter.
 
 ## OpenCV
-skriv litt om mpc/path planning to i gruppa
-4 andre holdt på med kamera og Lidar, intereserte meg
-Fikk litt data fra de, eksperimenterte litt selv
-
-## Siste men ikke minst...👀
-
-teknisk verv i Fuel Fighter i 1. klasse. 
-<p>💃🏻Teknisk verv i 1.klasse
-<p>⚡️Gruppemedlem i Autonomous-gruppen</p>
-<p>🔋Hovedansvar for Autonmous Simulator, og eksperimenterte litt med path planning<p>
